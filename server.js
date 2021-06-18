@@ -11,16 +11,7 @@ const io = require('socket.io')(3000
 )
 
 io.on('connection', socket => {
-
-    socket.emit('chat-message', message => {
-        console.log("emitting")
-
-        console.log(message)
-    })
-
-    console.log("connection received")
-
+  console.log("New user")
+  socket.emit('chat-message', 'Hello Cruel World');    
 })
-
-
 

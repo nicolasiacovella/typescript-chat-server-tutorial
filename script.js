@@ -4,9 +4,15 @@ const messageForm = document.getElementById('send-container')
 
 const messageInput = document.getElementById('message-input')
 
-socker.on('chat-message', data => {
-    console.log("foo") 
+socket.on('chat-message', data => {
+    console.log("got data")
+    console.log(data) 
 })
+
+// socket.on('chat-message', function (data) {
+//     console.log(`Received message: ${data}`);
+// });
+
 
 
 
